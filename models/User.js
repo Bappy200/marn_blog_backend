@@ -13,6 +13,7 @@ const UserSchema = mongoose.Schema({
         type: String,
         require: true,
     },
+    flowers:[mongoose.Types.ObjectId],
     password:{
         type: String,
         require: true,

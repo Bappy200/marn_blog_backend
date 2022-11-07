@@ -9,11 +9,8 @@ const PORT = process.env.PORT || 5001
 
 //routers
 const userRouter = require("./routers/User");
-
-
-
-
-
+const blogRouter = require("./routers/Blog")
+const commentRouter = require("./routers/Comment");
 
 
 //middleware
@@ -21,6 +18,8 @@ app.use(cors())
 app.use(bodyPerser.json())
 
 app.use("/", userRouter);
+app.use("/blog", blogRouter);
+app.use("/comment", commentRouter);
 
 
 //DB CONNECTION
